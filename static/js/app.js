@@ -78,3 +78,21 @@ function createSongItem(song, index) {
   return songItem;
 }
 
+
+function initializePlayer() {
+  playlist.forEach((song, index) => {
+    const songItem = createSongItem(song, index);
+    songList.appendChild(songItem);
+  });
+
+  loadSong(currentSongIndex);
+  setVolume(volumeRange.value);
+
+  playButton.addEventListener("click", playSong);
+  pauseButton.addEventListener("click", pauseSong);
+  nextButton.addEventListener("click", playNextSong);
+  previousButton.addEventListener("click", playPreviousSong);
+  volumeRange.addEventListener("input", (e) => setVolume(e.target.value));
+}
+
+initializePlayer();
