@@ -59,4 +59,8 @@ const playlist = [
     loadSong(currentSongIndex);
     playSong();
   }
- 
+  
+  function setVolume(volume) {
+    audio.volume = volume;
+  }
+  
