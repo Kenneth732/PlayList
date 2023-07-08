@@ -32,3 +32,16 @@ function loadSong(songIndex) {
   audio.src = song.file;
   audio.load();
 }
+
+const playerControls = document.getElementById("player-controls");
+
+function playSong() {
+  audio.play();
+  playerControls.style.backgroundImage = `url(${playlist[currentSongIndex].image})`;
+  playerControls.classList.add("player-controls-active");
+}
+
+function pauseSong() {
+  audio.pause();
+  playerControls.classList.remove("player-controls-active");
+}
