@@ -47,3 +47,9 @@ const playlist = [
   }
   
   
+  
+  function playNextSong() {
+    currentSongIndex = (currentSongIndex + 1) % playlist.length;
+    loadSong(currentSongIndex);
+    playSong();
+  }
