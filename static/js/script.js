@@ -24,4 +24,6 @@ const playlist = [
   const previousButton = document.getElementById("previous-button");
   const volumeRange = document.getElementById("volume-range");
   
- 
+  let currentSongIndex = 0;
+  let audio = new Audio();
+  
