@@ -27,3 +27,9 @@ const playlist = [
   let currentSongIndex = 0;
   let audio = new Audio();
   
+  function loadSong(songIndex) {
+    const song = playlist[songIndex];
+    audio.src = song.file;
+    audio.load();
+  }
+  
