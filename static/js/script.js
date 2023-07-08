@@ -53,3 +53,10 @@ const playlist = [
     loadSong(currentSongIndex);
     playSong();
   }
+  
+  function playPreviousSong() {
+    currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+    loadSong(currentSongIndex);
+    playSong();
+  }
+ 
