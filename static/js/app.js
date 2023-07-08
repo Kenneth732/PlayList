@@ -45,3 +45,17 @@ function pauseSong() {
   audio.pause();
   playerControls.classList.remove("player-controls-active");
 }
+
+
+
+function playNextSong() {
+  currentSongIndex = (currentSongIndex + 1) % playlist.length;
+  loadSong(currentSongIndex);
+  playSong();
+}
+
+function playPreviousSong() {
+  currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+  loadSong(currentSongIndex);
+  playSong();
+}
