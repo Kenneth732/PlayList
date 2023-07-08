@@ -59,3 +59,22 @@ function playPreviousSong() {
   loadSong(currentSongIndex);
   playSong();
 }
+
+function setVolume(volume) {
+  audio.volume = volume;
+}
+
+function createSongItem(song, index) {
+  const songItem = document.createElement("li");
+  songItem.classList.add("song-item");
+  songItem.innerHTML = ` <img src="${song.image}" /> ${song.title} - ${song.artist}`;
+
+  songItem.addEventListener("click", () => {
+    currentSongIndex = index;
+    loadSong(currentSongIndex);
+    playSong();
+  });
+
+  return songItem;
+}
+
