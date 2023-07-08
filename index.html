@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Music Player</h1>
+  </header>
+  <main>
+    <section id="playlist">
+      <h2>Playlist</h2>
+      <ul id="song-list">
+        <!-- Song will be display here dynamic -->
+      </ul>
+    </section>
+
+    <section id="player-controls">
+      <h2>Player Controls</h2>
+      
+      <div id="audio-controls">
+        <button id="play-button">Play</button>
+        <button id="pause-button">Pause</button>
+        <button id="next-button">Next</button>
+        <button id="previous-button">Previous</button>
+      </div>
+
+      <div id="volume-controls">
+        <label for="volume-range">Volume:</label>
+        <input type="range" id="volume-range" min="0" max="1" step="0.1" value="1">
+      </div>
+    </section>
+  </main>
+  <script src="static/js/script.js"></script>
+</body>
+</html>
+
+
